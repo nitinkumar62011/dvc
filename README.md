@@ -1,4 +1,4 @@
 "This is readme file all things keep here related to cammand"
-''' bash
+```bash
 git commit -m
-'''
+```
