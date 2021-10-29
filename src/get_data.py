@@ -9,6 +9,8 @@ import argparse
 def read_params(config_path):
     with open(config_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
+        print("Hi")
+        print(config)
     return config
 
 def get_data(config_path):
@@ -23,7 +25,10 @@ def get_data(config_path):
 
 if __name__=="__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--config", default="params.yaml")
+    args.add_argument("--params", default="params.yaml")
     parsed_args = args.parse_args()
-    data = get_data(config_path=parsed_args.config)
+    print("Next")
+    print(parsed_args.params)
+
+    data = get_data(config_path=parsed_args.params)
     print("data",data.head())
